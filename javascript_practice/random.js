@@ -1,15 +1,18 @@
-const inputHigh = prompt('Please provide a number');
+const inputLow = prompt('Please provide your lowest number');
 
+const inputHigh = prompt('Please provide your highest number');
+
+const lowNumber = parseInt(inputLow);
 const highNumber = parseInt(inputHigh);
 
 
 
-if (highNumber) {
-    const randomNumber = Math.floor(Math.random()*highNumber)+1;
+if (lowNumber && highNumber) {
+    const randomNumber = Math.floor(Math.random()*(highNumber - lowNumber +1) ) + lowNumber;
 
-    console.log('${randomNumber} is a random number between 1 and ${highNumber}.');
+    console.log('${randomNumber} is a random number between ${lowNumber} and ${highNumber}.');
 } 
 
 else {
-    console.log('Provide a figure, not a word');
+    console.log('Provide two figures; no words');
 }

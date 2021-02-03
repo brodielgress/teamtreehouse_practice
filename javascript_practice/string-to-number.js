@@ -1,7 +1,9 @@
-//const HTMLBadges = prompt('How many HTML badges do you have?');
-//const CSSBadges = prompt('How many CSS badges do you have?');
-//
-//const totalBadges = +HTMLBadges + +CSSBadges;
+var firstName = prompt("What is your first name?");
 
-const pi = prompt('What is Pi?');
-console.log( +pi === 3.14 );
+var lastName = prompt("What is your last name?")
+
+var completeName = firstName.toUpperCase() + ' ' + lastName.toUpperCase();
+
+var characterCount = completeName.length;
+
+alert("The string \"" + completeName + "\" is " + characterCount + " characters long.");
